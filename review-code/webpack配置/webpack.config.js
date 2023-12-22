@@ -14,8 +14,8 @@ const config = {
     filename: 'bundle.js',
     path: path.join(__dirname, 'dist')
   },
+  devtool: 'source-map',
   // Loader的执行顺序是固定从后往前的
-
   module: {
     rules: [
       // 关于css的配置
@@ -46,26 +46,26 @@ const config = {
     //     }
     //   ]
     // },
-    {
-      test: /\.(jpe?g|png|gif|svg)$/i,
-      type: 'asset',
-      parser: {
-        dataUrlCondition: {
-          maxSize: 8 * 1024 // 小于8KB的图片将被转换为base64编码
-        }
-      }
-    },
-    {
-      test: '/\.js$/i',
-      use: [{
-        loader: 'babel-loader',
-        options: {
-          presets: [
-            '@babel/preset-env'
-          ]
-        }
-      }]
-    }
+    // {
+    //   test: /\.(jpe?g|png|gif|svg)$/i,
+    //   type: 'asset',
+    //   parser: {
+    //     dataUrlCondition: {
+    //       maxSize: 8 * 1024 // 小于8KB的图片将被转换为base64编码
+    //     }
+    //   }
+    // },
+    // {
+    //   test: '/\.js$/i',
+    //   use: [{
+    //     loader: 'babel-loader',
+    //     options: {
+    //       presets: [
+    //         '@babel/preset-env'
+    //       ]
+    //     }
+    //   }]
+    // }
   ]
   },
   plugins: [
