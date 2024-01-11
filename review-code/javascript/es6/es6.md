@@ -32,3 +32,19 @@ const保证的并不是变量的值不能改动，而是变量指向的那个内
 ### 解构
 
 
+### es6新增的东西有哪些？
+1. 箭头函数
+2. 字符串模板
+3. 支持模块化（import、export）
+4. 类（class、constructor、extends）
+5. let、const 关键字
+6. 新增一些数组、字符串等内置构造函数方法，例如 Array.from、Array.of 、Math.sign、Math.trunc 等
+7. 新增一些语法，例如扩展操作符、解构、函数默认参数等
+8. 新增一种基本数据类型 Symbol
+9. 新增元编程相关，例如 proxy、Reflect
+10. Set 和 Map 数据结构
+11. Promise
+12. Generator 生成器
+
+
+
