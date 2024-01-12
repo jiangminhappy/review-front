@@ -187,8 +187,8 @@ line-clamp:3;        // 显示的行数
 
 ###  display的block、inline和inline-block的区别
 - block： 会独占一行，多个元素会另起一行，可以设置width、height、margin和padding属性；
-- inline： 元素不会独占一行，设置width、height属性无效。但可以设置水平方向的margin和padding属性，不能设置垂直方向的padding和margin；
-- inline-block： 将对象设置为inline对象，但对象的内容作为block对象呈现，之后的内联对象会被排列在同一行内。
+- inline： 元素不会独占一行，设置width、height属性无效。但可以设置水平方向的margin和padding属性，不能设置垂直方向的padding和margin；（a、b、strong、em、是、span）
+- inline-block： 将对象设置为inline对象，但对象的内容作为block对象呈现，之后的内联对象会被排列在同一行内，高度，行高、外边距以及内边距都可以控制。
 
 对于行内元素和块级元素，其特点如下：
 

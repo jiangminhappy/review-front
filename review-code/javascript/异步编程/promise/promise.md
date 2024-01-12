@@ -32,3 +32,4 @@ Promise有五个常用的方法：then()、catch()、all()、race()、finally()
 2. catch()：只会捕获Promise的异常，不会捕获同步的异常。
 3. all():接收一个数组，数组的每一项都是一个peomise对象，当数组中所有的promise的状态都达到resolved的时候，all方法的状态就会变成resolved，如果有一个状态变成了rejected，那么all方法的状态就会变成rejected。all方法成功的时候返回一个数组，这个数组是按调用顺序保存着结果的
 4. race(): 接收一个数组，当最先执行完的事件执行完之后，就直接返回该promise对象的值，如果第一个promise对象状态变成resolved，那自身的状态变成了resolved；反之第一个promise变成rejected，那自身状态就会变成rejected。
+5. allSettled(): 接收一个 Promise 数组作为参数，并返回一个数组，数组中的每个元素都是一个对象，都包含状态和结果两种属性。

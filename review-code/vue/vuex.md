@@ -20,3 +20,5 @@ Vuex中action和mutation的区别
 ### Vuex和localStorage的区别
 - Vuex是响应式的，localstorage需要刷新
 
+### pinia
+
