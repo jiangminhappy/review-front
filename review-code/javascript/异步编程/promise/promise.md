@@ -33,3 +33,9 @@ Promise有五个常用的方法：then()、catch()、all()、race()、finally()
 3. all():接收一个数组，数组的每一项都是一个peomise对象，当数组中所有的promise的状态都达到resolved的时候，all方法的状态就会变成resolved，如果有一个状态变成了rejected，那么all方法的状态就会变成rejected。all方法成功的时候返回一个数组，这个数组是按调用顺序保存着结果的
 4. race(): 接收一个数组，当最先执行完的事件执行完之后，就直接返回该promise对象的值，如果第一个promise对象状态变成resolved，那自身的状态变成了resolved；反之第一个promise变成rejected，那自身状态就会变成rejected。
 5. allSettled(): 接收一个 Promise 数组作为参数，并返回一个数组，数组中的每个元素都是一个对象，都包含状态和结果两种属性。
+
+
+#### promise.all()和promise.allSettled的区别
+都能同时处理多个异步的请求，promise.all中如果有一个异步事件出错，那么将返回一个失败的promise。所以每个异步事件互不依赖的话使用promise.allSettled可能更好，无论每个异步事件执行成功还是失败都会返回一个带有执行结果的promise。
+
+Promise 构造函数接受一个执行器函数作为参数，该函数包含异步操作的逻辑。在执行器函数中，可以调用 resolve 方法来表示操作成功，并传递操作的结果；调用 reject 方法来表示操作失败，并传递错误信息。

@@ -1,21 +1,4 @@
-### flex的理解
-Flex是FlexibleBox的缩写，意味“弹性布局”，任何一个容器都可以指定为Flex布局。采用Flex布局的元素，称为Flex容器，它的子元素自动成为容易成员，称为Flex项目。设置Flex布局以后，子元素的float、clear和vertical-align属性将失效。
 
-6个属性设置在容器上：
-- flex-direction属性决定主轴的方向（即项目的排列方向）。
-- flex-wrap属性定义，如果一条轴线排不下，如何换行。
-- flex-flow属性是flex-direction属性和flex-wrap属性的简写形式，默认值为row nowrap；
-- justify-content属性定义了项目在主轴上的对齐方式（flex-start、flex-end、center、space-between、space-around）。
-- align-items属性定义项目在交叉轴上如何对齐（flex-start、flex-end、center）。
-- align-content属性定义了多根轴线的对齐方式。如果项目只有一根轴线，该属性不起作用（flex-start、flex-end、center、space-between、space-around）。
-
-6个属性设置在项目上：
-- order属性定义项目的排列顺序。数值越小，排列越靠前，默认为0。
-- flex-grow属性定义项目的放大比例，默认为0，即如果存在剩余空间，也不放大。
-- flex-shrink属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小。
-- flex-basis属性定义了在分配多余空间之前，项目占据的主轴空间。浏览器根据这个属性，计算主轴是否有多余空间。它的默认值为auto，即项目的本来大小。
-- flex属性是flex-grow，flex-shrink和flex-basis的简写，默认值为0 1 auto。
-- align-self属性允许单个项目有与其他项目不一样的对齐方式，可覆盖align-items属性。默认值为auto，表示继承父元素的align-items属性，如果没有父元素，则等同于stretch（flex-start、flex-end、center等）。
 
 ### 定位与浮动
 **浮动的定义：**非IE浏览器下，容器不设高度且子元素浮动时，容器高度不能被内容撑开。 此时，内容会溢出到容器外面而影响布局。这种现象被称为浮动（溢出）。
@@ -111,13 +94,13 @@ BFC（会计格式化上下文）是一个独立的渲染区域，是布局过�
 | inherit	 | 规定从父元素继承position属性的值 |
 | sticky：黏贴定位 | 基于用户的滚动位置来定位，在 position:relative 与 position:fixed 定位之间切换；元素定位表现为在跨越特定阈值前为相对定位，之后为固定定位。这个特定阈值指的是 top, right, bottom 或 left 之一 |
 
-1. relative： 元素的定位永远是相对于元素自身位置的，和其他元素没关系，也不会影响其他元素。
+1. relative： 元素仍然在文档流中；元素的定位永远是相对于元素自身位置的，和其他元素没关系，也不会影响其他元素。
 ![Alt text](image.png)
 
-2. fixed： 元素的定位是相对于 window （或者 iframe）边界的，和其他元素没有关系。但是它具有破坏性，会导致其他元素位置的变化。
+2. fixed： 元素的定位是相对于 window （或者 iframe）边界的，和其他元素没有关系。但是它具有破坏性，会导致其他元素位置的变化。固定定位的元素脱离了文档流，不会影响其他元素的布局
 ![Alt text](image-1.png)
 
-3. absolute：浏览器会递归查找该元素的所有父元素，如果找到一个设置了position:relative/absolute/fixed的元素，就以该元素为基准定位，如果没找到，就以浏览器边界定位。
+3. absolute：浏览器会递归查找该元素的所有父元素，如果找到一个设置了position:relative/absolute/fixed的元素，就以该元素为基准定位，如果没找到，就以浏览器边界定位。绝对定位的元素脱离了文档流，不会影响其他元素的布局
 ![Alt text](image-2.png)
 ![Alt text](image-3.png)
 

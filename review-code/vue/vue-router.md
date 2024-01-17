@@ -41,3 +41,6 @@ history原理是使用HTML5 history提供的pushState、replaceState两个API，
 
 - 获取参数方式不一样，一个通过$route.params，一个通过 $route.query
 - 参数的生命周期不一样，query参数在URL地址栏中显示不容易丢失，params参数不会在地址栏显示，刷新后会消失
+
+
+### 源码的基本实现
